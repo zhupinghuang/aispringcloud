@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    config:
+      name: configclient #文件名
+      laberl: master  #分支
+      discovery:
+        enabled: true #启动查找config服务
+        service-id: configserver #通过id查找   通过configserver找到对应的微服务 找到微服务内部的配置文件中的git地址一连串找到配置文件信息

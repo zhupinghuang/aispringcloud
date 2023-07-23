@@ -1,0 +1,18 @@
+server:
+  port: 8888 #端口
+spring:
+  application:
+    name: configserver  #名称
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/zhupinghuang/aispringcloud.git  #git地址
+          search-paths: config    #文件夹名称
+          username:  #账号
+          password:  #密码
+      label: main  #分支
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/ #注册中心地址
